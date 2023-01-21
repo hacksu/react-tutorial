@@ -28,6 +28,10 @@ label {
     border: 1px solid lightgray;
 }
 
+#form>div:last-child {
+    border: none;
+}
+
 input {
     margin-left: 10px;
 }
