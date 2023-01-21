@@ -1,0 +1,131 @@
+body {
+    font-family: sans-serif;
+    padding: 10px;
+    max-width: fit-content;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin: 50px 0;
+}
+
+h3 {
+    margin: 10px 0 20px 0;
+}
+
+label {
+    display: block;
+    margin: 20px;
+}
+
+#methods>label {
+    display: inline;
+}
+
+#form>div,
+#log>div {
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+
+input {
+    margin-left: 10px;
+}
+
+input:disabled {
+    background-color: lightgray;
+}
+
+button {
+    font-size: 1.2em;
+}
+
+.row {
+    display: flex;
+}
+
+.row>div:first-child {
+    margin-right: 30px;
+}
+
+#log {
+    font-family: monospace;
+}
+
+#log>div {
+    width: 500px;
+}
+
+.l2 {
+    margin-left: 20px;
+}
+
+@keyframes slide-in {
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes quick-hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
+@keyframes shake {
+    10%, 90% {
+      transform: translateX(-4px);
+    }
+    20%, 80% {
+      transform: translateX(4px);
+    }
+  
+    30%, 50%, 70% {
+      transform: translateX(-8px);
+    }
+  
+    40%, 60% {
+      transform: translateX(8px);
+    }
+}
+
+.shaking {
+    animation: shake 0.5s linear both;
+}
+
+.sliding-in {
+    transform: translateX(-50%);
+    opacity: 0;
+    animation-name: slide-in;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+}
+
+#login {
+    animation-delay: 1s;
+}
+
+#card {
+    animation-delay: 1.5s;
+}
+
+#explosion {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    animation-name: quick-hide;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+    animation-duration: 0.01s;
+}
+
+#form {
+    position: relative;
+}

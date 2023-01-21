@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitch Mart Checkout Form</title>
+    <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+    <h1>Mitch Mart Checkout Form</h1>
+    <div class="row">
+        <div id="form">
+            <div id="methods">
+                <h3>Payment Method:</h3>
+                <label>Existing Account <input id="check-login" type="checkbox" /></label>
+                <label>New Credit Card <input id="check-card" type="checkbox" /></label>
+                <label>Trust Me, Bro, Just Trust Me <input id="check-trust" type="checkbox" /></label>
+            </div>
+            <div id="login">
+                <h3>Login Information:</h3>
+                <label>Username: <input type="text" /></label>
+                <label>Password: <input type="password" /></label>
+            </div>
+            <div id="card">
+                <h3>Add New Card:</h3>
+                <label>Card Number: <input type="text" /></label>
+                <label>Expiration Date: <input type="text" /></label>
+                <label>The Three Numbers on the Back: <input type="text" /></label>
+            </div>
+            <div style="text-align: end;">
+                <button id="checkout">Checkout</button>
+            </div>
+            <div style="text-align: end;">
+                <a href="checkout-react.html">React Version &gt;</a>
+            </div>
+        </div>
+        <div id="log">
+            <div>
+                <details>
+                    <h3>Event Listener Decision Log</h3>
+                </details>
+            </div>
+        </div>
+    </div>
+    <script>
+        function evLog(text, entryClass="") {
+            document.querySelector("#log > div > details")
+                .insertAdjacentHTML("beforeend", `<p class="${entryClass}"">${text}</p>`);
+        }
+        function setDisabled(nodeList, isDisabled) {
+            nodeList.forEach(n=>(n.disabled=isDisabled));
+        }
+        // initially disable all but the checkmarks
+        setDisabled(document.querySelectorAll("input:not([type=\"checkbox\"])"), true);
+        // reset browser memory
+        document.querySelectorAll("input").forEach(i=>{i.checked=false; i.value=""});
+        // event listener for "existing account" checkbox
+        document.querySelector("#check-login").onchange = function(event) {
+            const subjects = document.querySelectorAll("#login input");
+            if (event.target.checked && !document.querySelector("#check-trust").checked) {
+                setDisabled(subjects, false);
+                evLog('"Existing Account" checked');
+                evLog('"Trust Me Bro" is unchecked -> enabling login fields', "l2");
+            } else if (!event.target.checked) {
+                setDisabled(subjects, true);
+                evLog('"Existing Account" unchecked');
+                evLog('disabling login fields', "l2");
+            } else {
+                evLog('"Existing Account" checked');
+                evLog('"Trust Me Bro" is checked -> not enabling login fields', "l2");
+            }
+        }
+        // event listener for "new credit card" checkbox
+        document.querySelector("#check-card").onchange = function(event) {
+            const subjects = document.querySelectorAll("#card input");
+            if (event.target.checked && !document.querySelector("#check-trust").checked) {
+                setDisabled(subjects, false);
+                evLog('"New Credit Card" checked');
+                evLog('"Trust Me Bro" is unchecked -> enabling new card fields', "l2");
+            } else if (!event.target.checked) {
+                setDisabled(subjects, true);
+                evLog('"New Credit Card" unchecked');
+                evLog('disabling new card fields', "l2");
+            } else {
+                evLog('"New Credit Card" checked');
+                evLog('"Trust Me Bro" is checked -> not enabling new card fields', "l2");
+            }
+        }
+        // event listener for "trust me" checkbox
+        document.querySelector("#check-trust").onchange = function (event) {
+            const subjects = document.querySelectorAll("input:not([type=\"checkbox\"])");
+            if (event.target.checked) {
+                setDisabled(subjects, true);
+                evLog('"Trust Me Bro" checked');
+                evLog("Disabling all fields", "l2");
+            } else {
+                evLog('"Trust Me Bro" unchecked');
+                if (document.querySelector("#check-card").checked) {
+                    setDisabled(document.querySelectorAll("#card input"), false);
+                    evLog('"New Credit Card" is checked -> enabling new card fields', "l2");
+                } else {
+                    evLog('"New Credit Card" is not checked -> not enabling new card fields', "l2");
+                }
+                if (document.querySelector("#check-login").checked) {
+                    setDisabled(document.querySelectorAll("#login input"), false);
+                    evLog('"Existing Account" is checked -> enabling login fields', "l2");
+                } else {
+                    evLog('"Existing Account" is not checked -> not enabling login fields', "l2");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
