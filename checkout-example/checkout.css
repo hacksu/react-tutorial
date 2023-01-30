@@ -22,6 +22,22 @@ label {
     display: inline;
 }
 
+.method-cont {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.method-cont > label {
+  margin: 0;
+}
+
+.method-cont > span {
+    font-size: small;
+    color: gray;
+}
+
 #form>div,
 #log>div {
     padding: 10px;
@@ -84,10 +100,10 @@ button {
 /* https://css-tricks.com/snippets/css/shake-css-keyframe-animation/ */
 @keyframes shake {
     10%, 90% {
-      transform: translateX(-4px);
+      transform: translateX(-16px);
     }
     20%, 80% {
-      transform: translateX(4px);
+      transform: translateX(16px);
     }
   
     30%, 50%, 70% {
@@ -122,8 +138,8 @@ button {
 #explosion {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    top: 30%;
+    transform: translateX(-50%) scale(1.5);
+    top: 20%;
     animation-name: quick-hide;
     animation-delay: 1.5s;
     animation-fill-mode: forwards;

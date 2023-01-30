@@ -14,7 +14,6 @@
         import { createRoot } from "https://esm.sh/react-dom@18.2.0/client";
 
         // transpiled version of checkout.jsx via the babel repl:
-
 "use strict";
 
 function CheckoutForm() {
@@ -37,7 +36,9 @@ function CheckoutForm() {
     id: "explosion"
   }), /*#__PURE__*/React.createElement("div", {
     id: "methods"
-  }, /*#__PURE__*/React.createElement("h3", null, "Payment Method:"), /*#__PURE__*/React.createElement("label", null, "Existing Account", /*#__PURE__*/React.createElement("input", {
+  }, /*#__PURE__*/React.createElement("h3", null, "Payment Method:"), /*#__PURE__*/React.createElement("div", {
+    class: "method-cont"
+  }, /*#__PURE__*/React.createElement("label", null, "Existing Account", /*#__PURE__*/React.createElement("input", {
     type: "checkbox",
     checked: checkLogin,
     onChange: e => {
@@ -46,7 +47,9 @@ function CheckoutForm() {
         rebuild();
       }
     }
-  })), /*#__PURE__*/React.createElement("label", null, "New Credit Card", /*#__PURE__*/React.createElement("input", {
+  })), /*#__PURE__*/React.createElement("span", null, "accountChecked=", String(checkLogin))), /*#__PURE__*/React.createElement("div", {
+    class: "method-cont"
+  }, /*#__PURE__*/React.createElement("label", null, "New Credit Card", /*#__PURE__*/React.createElement("input", {
     type: "checkbox",
     checked: checkCard,
     onChange: e => {
@@ -55,7 +58,9 @@ function CheckoutForm() {
         rebuild();
       }
     }
-  })), /*#__PURE__*/React.createElement("label", null, "Trust Me, Bro, Just Trust Me", /*#__PURE__*/React.createElement("input", {
+  })), /*#__PURE__*/React.createElement("span", null, "cardChecked=", String(checkCard))), /*#__PURE__*/React.createElement("div", {
+    class: "method-cont"
+  }, /*#__PURE__*/React.createElement("label", null, "Trust Me, Bro, Just Trust Me", /*#__PURE__*/React.createElement("input", {
     type: "checkbox",
     checked: checkTrust,
     onChange: e => {
@@ -64,7 +69,7 @@ function CheckoutForm() {
         rebuild();
       }
     }
-  }))), /*#__PURE__*/React.createElement("div", {
+  })), /*#__PURE__*/React.createElement("span", null, "trustChecked=", String(checkTrust)))), /*#__PURE__*/React.createElement("div", {
     id: "login",
     className: rebuilding && "sliding-in"
   }, /*#__PURE__*/React.createElement("h3", null, "Login Information:"), /*#__PURE__*/React.createElement("label", null, "Username:", /*#__PURE__*/React.createElement("input", {

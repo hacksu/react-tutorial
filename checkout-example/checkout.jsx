@@ -1,3 +1,7 @@
+import React, { useState } from "https://esm.sh/react@18.2.0?dev";
+import { createRoot } from "https://esm.sh/react-dom@18.2.0/client?dev";
+
+
 function CheckoutForm() {
   const [checkLogin, setCheckLogin] = useState(false);
   const [checkCard, setCheckCard] = useState(false);
@@ -9,59 +13,63 @@ function CheckoutForm() {
     setTimeout(() => {
       setRebuilding(false);
       document.body.classList.remove("shaking");
-  	}, 2001);
+    }, 2001);
   };
   return (
     <>
       <h1>Mitch Mart Checkout Form</h1>
       <div id="form">
-        {rebuilding && (
-          <img
-            src="explosion.gif"
-            id="explosion"
-          />
-        )}
+        {rebuilding && <img src="explosion.gif" id="explosion" />}
         <div id="methods">
           <h3>Payment Method:</h3>
-          <label>
-            Existing Account
-            <input
-              type="checkbox"
-              checked={checkLogin}
-              onChange={(e) => {
-                if (!rebuilding) {
-                  setCheckLogin(e.target.checked);
-                  rebuild();
-                }
-              }}
-            />
-          </label>
-          <label>
-            New Credit Card
-            <input
-              type="checkbox"
-              checked={checkCard}
-              onChange={(e) => {
-                if (!rebuilding) {
-                  setCheckCard(e.target.checked);
-                  rebuild();
-                }
-              }}
-            />
-          </label>
-          <label>
-            Trust Me, Bro, Just Trust Me
-            <input
-              type="checkbox"
-              checked={checkTrust}
-              onChange={(e) => {
-                if (!rebuilding) {
-                  setCheckTrust(e.target.checked);
-                  rebuild();
-                }
-              }}
-            />
-          </label>
+          <div class="method-cont">
+            <label>
+              Existing Account
+              <input
+                type="checkbox"
+                checked={checkLogin}
+                onChange={(e) => {
+                  if (!rebuilding) {
+                    setCheckLogin(e.target.checked);
+                    rebuild();
+                  }
+                }}
+              />
+            </label>
+            <span>accountChecked={String(checkLogin)}</span>
+          </div>
+          <div class="method-cont">
+            <label>
+              New Credit Card
+              <input
+                type="checkbox"
+                checked={checkCard}
+                onChange={(e) => {
+                  if (!rebuilding) {
+                    setCheckCard(e.target.checked);
+                    rebuild();
+                  }
+                }}
+              />
+            </label>
+            <span>cardChecked={String(checkCard)}</span>
+          </div>
+          <div class="method-cont">
+            <label>
+              Trust Me, Bro, Just Trust Me
+              <input
+                type="checkbox"
+                checked={checkTrust}
+                onChange={(e) => {
+                  if (!rebuilding) {
+                    setCheckTrust(e.target.checked);
+                    rebuild();
+                  }
+                }}
+              />
+            </label>
+            <span>trustChecked={String(checkTrust)}</span>
+          </div>
         </div>
         <div id="login" className={rebuilding && "sliding-in"}>
           <h3>Login Information:</h3>
@@ -98,7 +106,7 @@ function CheckoutForm() {
           </button>
         </div>
         <div>
-            <a href="checkout-js.html">&lt; Vanilla JS Version</a>
+          <a href="checkout-js.html">&lt; Vanilla JS Version</a>
         </div>
       </div>
     </>
