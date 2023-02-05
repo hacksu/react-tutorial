@@ -151,4 +151,38 @@ function MyComponent(){
 }
 ```
 
-- so. react enables us to reuse our function component over and over again. each instance of it acts independently; clicking the button in one does not affect the variables in the other. this is one react feature where even in this simple example, it's way easier than anything you can do with plain html and javascript. let's utilize it in a more interesting application.
+- so. react enables us to reuse our function component over and over again. each instance of it acts independently; clicking the button in one does not affect the variables in the other. this is one react feature where even in this simple example, it's way easier than anything you can do with plain html and javascript.
+
+- now that we've got the basics down, let's reopen the codepen in a new tab, and do something more fun and interesting.
+
+first, in mycomponent, create an object based on the pokemon schema. id, name, sprite, height? weight? and type??? "types" is an array of objects each of which stores a slot number for ordering purposes and then has another object under the key "type" which itself has the name of the type and the url for more information about the type. that's a mouthful. but types seem important. maybe just id, name, and sprite to start out with, in the object we're creating.
+
+explain what the deal with objects is. use the analogy of a table. i would love to have a visual built before tuesday
+
+make mycomponent return a div that shows the pokemon. it needs to be inline-block for later. also, center stuff in it and maybe give it a rounded border and a margin.
+
+react hooks are functions that give you access to react's data and let you receive updates from it. their names start with "use". we've already seen one of react's built-in hooks, "useState"; it let us store a variable in react's memory, and it also gave us a way to receive updates about that variable from it. now we can use another one, "useFetch". useFetch will ask the browser to retrieve a javascript object from a url and then trigger our component function to be re-run once that object loads. behind the scenes, it's actually using useState to manage variables; it is a custom hook that someone created, which just means that it's a function that uses and is built on top of react's basic built-in hooks.
+
+believe it or not, there really are javascript objects that can be found by going to urls on the internet. a website that makes data available in a machine-readable form at certain urls is called an application programming interface, or API. (API is a broad term that can apply to a million different things, but this is one of them.) a lot of apis require you to make an account and have login credentials and stuff, but one that doesn't is the pokemon api located at pokeapi.com. we can freely retrieve an object that stores the data of a pokemon based on its id like this:
+
+```jsx
+const {isLoading, data} = useFetch("https://pokeapi.co/api/v2/pokemon/25/");
+```
+
+you can go to that url to see all the data in the object that's available there, but it is a lot more than we need. the data that we've been using is there, however, so we can substitute our object for the one returned by useFetch. (ourObject = data)
+
+but, there is one problem. we need to figure out what to do when that object from that url hasn't loaded yet. isLoading will inform us whether it has or hasn't loaded; we can use a simple if statement to change this function's behavior if it hasn't.
+
+```jsx
+if (isLoading) {
+  return <p>Loading...</p>;
+}
+```
+
+now our code will work. all we had to do is stop it from getting to the point where it attempted to read data from this object when the object hadn't actually loaded yet.
+
+so, the main advantage to using this api instead of making our own objects is that now we can get data for every pokemon instantly. if we change the url that we're passing to useFetch, we can get the pokemon corresponding to a different id. we can also actually use a pokemon's name in the same spot and get a specific pokemon.
+
+then, change this function's name to my pokemon and instantiate it a couple of times in my component. to switch what pokemon each of them display, use props. just like functions take inputs, components take inputs.
+
+if we want, we could use a for loop to generate the first 10, 20, or 100 pokemon. we can also get the names of all the pokemon ever, filter it, and create a pokemon component for each name in the filtered results. and that's our pokedex.
