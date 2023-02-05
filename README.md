@@ -132,3 +132,23 @@ function MyComponent(){
 ```
 
 - so yeah. this is pretty much as simple as a react app gets. i will now pause so that everyone can catch up, ask questions, or opine that this code looks weird.
+
+- this is a lot of different kinds of punctuation in one place.
+
+- the problem with doing a react app example is that, for a hello-world type example, using normal javascript event listeners is like, a lot simpler? there's a lot of logic that goes into something pretty simple, here? but the extra tools pay off when it comes to larger examples, i promise. that's why i had to show you one at the beginning of this. anyway. let's do one more fun thing with this basic example before we move on to something more interesting.
+
+- in this boilerplate code at the top, i told react to update the page based on the component/function called MyComponent; so the entire page will be based on what the function MyComponent returns. but i think the page can have more stuff than this. let's rename our function so it no longer comprises the entire contents of the page; i'll call it MyGreeting.
+
+- then, we'll define a new MyComponent. it will be quite simple:
+
+```jsx
+function MyComponent(){
+  return <>
+    <MyGreeting />
+    <MyGreeting />
+    <MyGreeting />
+  </>;
+}
+```
+
+- so. react enables us to reuse our function component over and over again. each instance of it acts independently; clicking the button in one does not affect the variables in the other. this is one react feature where even in this simple example, it's way easier than anything you can do with plain html and javascript. let's utilize it in a more interesting application.
