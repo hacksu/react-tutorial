@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="437.83298mm"
+   height="469.02414mm"
+   viewBox="0 0 437.83298 469.02414"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="usestate.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.46929649"
+     inkscape:cx="384.61826"
+     inkscape:cy="1136.808"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path11125" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(128.86778,-39.365772)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect75"
+       width="436.83298"
+       height="225.64026"
+       x="-128.36778"
+       y="39.865772" />
+    <text
+       xml:space="preserve"
+       style="font-size:16.9333px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="-117.60402"
+       y="66.177177"
+       id="text1604"><tspan
+         sodipodi:role="line"
+         id="tspan1602"
+         style="stroke-width:0.264583"
+         x="-117.60402"
+         y="66.177177">Step 1: Initialization</tspan></text>
+    <rect
+       style="fill:#d3e6ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0"
+       id="rect2477"
+       width="132.35437"
+       height="140.72618"
+       x="157.60744"
+       y="100.46175" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="157.04364"
+       y="92.880302"
+       id="text3243"><tspan
+         sodipodi:role="line"
+         id="tspan3241"
+         style="font-size:11.2889px;stroke-width:0.264583"
+         x="157.04364"
+         y="92.880302">React's memory</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.3444px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="198.07663"
+       y="176.99637"
+       id="text5023"><tspan
+         sodipodi:role="line"
+         id="tspan5021"
+         style="font-size:18.3444px;stroke-width:0.264583"
+         x="198.07663"
+         y="176.99637">&quot;hello&quot;</tspan></text>
+    <rect
+       style="fill:#d3e6ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0"
+       id="rect6757"
+       width="236.65498"
+       height="140.72618"
+       x="-98.069794"
+       y="100.46175" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="-98.633591"
+       y="92.880302"
+       id="text6761"><tspan
+         sodipodi:role="line"
+         id="tspan6759"
+         style="font-size:11.2889px;stroke-width:0.264583"
+         x="-98.633591"
+         y="92.880302">Component function</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.271px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="17.628717"
+       y="165.74222"
+       id="text8271"><tspan
+         sodipodi:role="line"
+         id="tspan8269"
+         style="font-size:18.271px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="17.628716"
+         y="165.74222">const [greeting, setGreeting] =</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:18.271px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="17.628719"
+         y="188.58096"
+         id="tspan21526">useState(&quot;hello&quot;);</tspan></text>
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect14755"
+       width="436.83298"
+       height="225.64026"
+       x="-128.36778"
+       y="282.24966" />
+    <rect
+       style="fill:#d3e6ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.00002, 6.00002;stroke-dashoffset:0"
+       id="rect26066"
+       width="236.65498"
+       height="86.01133"
+       x="-98.069794"
+       y="397.00299" />
+    <text
+       xml:space="preserve"
+       style="font-size:16.9333px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="-117.60402"
+       y="308.56107"
+       id="text14759"><tspan
+         sodipodi:role="line"
+         id="tspan14757"
+         style="stroke-width:0.264583"
+         x="-117.60402"
+         y="308.56107">Step 2-∞: Updates</tspan></text>
+    <rect
+       style="fill:#d3e6ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6, 6;stroke-dashoffset:0"
+       id="rect14761"
+       width="132.35437"
+       height="140.72618"
+       x="157.60744"
+       y="342.84564" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="157.04364"
+       y="335.26419"
+       id="text14765"><tspan
+         sodipodi:role="line"
+         id="tspan14763"
+         style="font-size:11.2889px;stroke-width:0.264583"
+         x="157.04364"
+         y="335.26419">React's memory</tspan></text>
+    <rect
+       style="fill:#d3e6ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.00002, 6.00002;stroke-dashoffset:0"
+       id="rect14771"
+       width="236.65498"
+       height="33.861019"
+       x="-98.069794"
+       y="342.84564" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="-98.633591"
+       y="335.26419"
+       id="text14775"><tspan
+         sodipodi:role="line"
+         id="tspan14773"
+         style="font-size:11.2889px;stroke-width:0.264583"
+         x="-98.633591"
+         y="335.26419">Update</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.3444px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="-72.476791"
+       y="365.63608"
+       id="text16679"><tspan
+         sodipodi:role="line"
+         id="tspan16677"
+         style="font-size:18.3444px;stroke-width:0.264583"
+         x="-72.476791"
+         y="365.63608">setGreeting(&quot;howdy&quot;);</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.3444px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="191.43933"
+       y="437.47729"
+       id="text25640"><tspan
+         sodipodi:role="line"
+         id="tspan25638"
+         style="font-size:18.3444px;stroke-width:0.264583"
+         x="191.43933"
+         y="437.47729">&quot;howdy&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.3444px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="198.07663"
+       y="376.88132"
+       id="text25644"><tspan
+         sodipodi:role="line"
+         id="tspan25642"
+         style="font-size:18.3444px;stroke-width:0.264583"
+         x="198.07663"
+         y="376.88132">&quot;hello&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.271px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="17.628717"
+       y="429.65363"
+       id="text25822"><tspan
+         sodipodi:role="line"
+         id="tspan25818"
+         style="font-size:18.271px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="17.628716"
+         y="429.65363">const [greeting, setGreeting] =</tspan><tspan
+         sodipodi:role="line"
+         style="font-size:18.271px;text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="17.628719"
+         y="452.49237"
+         id="tspan25820">useState(&quot;hello&quot;);</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="-98.633591"
+       y="392.2067"
+       id="text26070"><tspan
+         sodipodi:role="line"
+         id="tspan26068"
+         style="font-size:11.2889px;stroke-width:0.264583"
+         x="-98.633591"
+         y="392.2067">Component function re-running due to update</tspan></text>
+    <path
+       style="opacity:0.684039;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Arrow1Lend)"
+       d="M 47.338929,196.43691 C 72.513712,249.83396 205.93694,255.27669 224.34295,190.8557"
+       id="path26389" />
+    <path
+       style="opacity:0.684039;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Arrow1Lend)"
+       d="M 221.15369,152.58456 C 202.06662,139.72617 185.1104,120.90302 162.94967,113.51611 114.11877,97.239142 20.224424,108.74089 -8.4731494,151.78725"
+       id="path26391" />
+    <rect
+       style="fill:#d3e6ff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.00005, 6.00005;stroke-dashoffset:0;opacity:0.78501629"
+       id="rect26516"
+       width="54.217457"
+       height="19.93289"
+       x="197.07454"
+       y="361.58255" />
+    <rect
+       style="opacity:0.78501629;fill:#d3e6ff;fill-opacity:1;stroke:none;stroke-width:0.999998;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:6.00005, 6.00005;stroke-dashoffset:0"
+       id="rect26652"
+       width="54.217457"
+       height="19.93289"
+       x="20.46917"
+       y="438.12482" />
+    <path
+       style="opacity:0.785016;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Arrow1Lend)"
+       d="M 45.906234,346.06598 C 101.06388,290.63742 187.60045,357.26762 209.40449,415.41179"
+       id="path26876" />
+    <path
+       style="opacity:0.785016;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;marker-end:url(#Arrow1Lend)"
+       d="M 187.4168,430.07026 C 181.11784,427.11513 169.18074,433.91934 162.61018,430.63406 155.74178,427.19985 160.10769,415.25722 139.49491,407.51876 118.88213,399.7803 79.530677,400.0214 46.470022,401.03523 33.141238,401.44397 15.821614,408.06754 4.4678788,414.14327"
+       id="path26878"
+       sodipodi:nodetypes="cszsc" />
+  </g>
+</svg>

@@ -89,12 +89,12 @@ const [greeting, setGreeting] = useState("Hello");
 
 - then, later, we can call the function setGreeting to update the value to something other than "Hello". after that, when this function re-runs, and this new line of code executes, greeting will be updated to its latest version by the return value of useState.
 
-- diagram??? step 1: initialize. the useState call sends the value "Hello" to react-space; react sends it right back to the "greeting" variable. step 2: update. the setGreeting call sends the value "Howdy" to react-space; react sends it back to the "greeting" variable.
+![](usestate.svg)
 
 - so, this overall situation might sound tricky, but if you understand it even a little, the actual code we need to write will seem pretty simple. first, let's create a button under our paragraph.
 
 ```html
-<button>cowboy</button>
+<button>full cowboy</button>
 ```
 
 - when we have multiple HTML elements in a row, we need to group them, kind of like how you group strings and numbers into arrays when you want to treat multiple as a single thing. to do that in jsx, we put an empty start tag before and an empty close tag after the elements we have. so, our return statement will look like this:
@@ -102,7 +102,7 @@ const [greeting, setGreeting] = useState("Hello");
 ```jsx
 return <>
     <p>Hello, {place}</p>
-    <button>cowboy</button>
+    <button>full cowboy</button>
   </>;
 ```
 
@@ -111,7 +111,7 @@ return <>
 ```jsx
 return <>
     <p>Hello, {place}</p>
-    <button onClick={}>cowboy</button>
+    <button onClick={}>full cowboy</button>
   </>;
 ```
 
@@ -126,7 +126,7 @@ function MyComponent(){
   const [greeting, setGreeting] = useState("hello");
   return <>
     <p>{greeting}, {place}</p>
-    <button onClick={()=>setGreeting("howdy")}>cowboy</button>
+    <button onClick={()=>setGreeting("howdy")}>full cowboy</button>
   </>;
 }
 ```
