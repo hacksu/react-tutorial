@@ -155,23 +155,83 @@ function MyComponent(){
 
 - now that we've got the basics down, let's reopen the codepen in a new tab, and do something more fun and interesting.
 
-first, in mycomponent, create an object based on the pokemon schema. id, name, sprite, height? weight? and type??? "types" is an array of objects each of which stores a slot number for ordering purposes and then has another object under the key "type" which itself has the name of the type and the url for more information about the type. that's a mouthful. but types seem important. maybe just id, name, and sprite to start out with, in the object we're creating.
-
-explain what the deal with objects is. use the analogy of a table. i would love to have a visual built before tuesday
-
-make mycomponent return a div that shows the pokemon. it needs to be inline-block for later. also, center stuff in it and maybe give it a rounded border and a margin.
-
-react hooks are functions that give you access to react's data and let you receive updates from it. their names start with "use". we've already seen one of react's built-in hooks, "useState"; it let us store a variable in react's memory, and it also gave us a way to receive updates about that variable from it. now we can use another one, "useFetch". useFetch will ask the browser to retrieve a javascript object from a url and then trigger our component function to be re-run once that object loads. behind the scenes, it's actually using useState to manage variables; it is a custom hook that someone created, which just means that it's a function that uses and is built on top of react's basic built-in hooks.
-
-believe it or not, there really are javascript objects that can be found by going to urls on the internet. a website that makes data available in a machine-readable form at certain urls is called an application programming interface, or API. (API is a broad term that can apply to a million different things, but this is one of them.) a lot of apis require you to make an account and have login credentials and stuff, but one that doesn't is the pokemon api located at pokeapi.com. we can freely retrieve an object that stores the data of a pokemon based on its id like this:
-
 ```jsx
-const {isLoading, data} = useFetch("https://pokeapi.co/api/v2/pokemon/25/");
+function MyComponent(){
+  let myPokemon = {
+    name: "pikachu",
+    id: 25,
+    height: 4,
+    weight: 60,
+    sprites: {
+      front_default: "https://hacksu.com/pika.png"
+    }
+  };
+}
 ```
 
-you can go to that url to see all the data in the object that's available there, but it is a lot more than we need. the data that we've been using is there, however, so we can substitute our object for the one returned by useFetch. (ourObject = data)
+- so. here, we are creating a javascript object. objects are useful because they organize data. think about it like this:
 
-but, there is one problem. we need to figure out what to do when that object from that url hasn't loaded yet. isLoading will inform us whether it has or hasn't loaded; we can use a simple if statement to change this function's behavior if it hasn't.
+- when you make a normal variable, you're basically adding an entry to a table. this imaginary table has one column for variable names and one column for the values these variables store. when you use a variable, you're asking the computer to find its name on the left side of this table and then either use or modify the value on its right.
+
+- when you create an object, you're basically creating an additional table, where extra values are stored under a different set of names. in javascript, you can create an object by just writing a list of name and value pairs within curly braces. a colon separates the name and the value, and commas separate the pairs.
+
+- so if we create this object called myPokemon, we're storing all these values in a separate table. we can also put an object in our object, as i'm doing here with "sprites". that creates yet another table.
+
+- so, to use a normal variable, you just write its name; to use data from inside an object's table, use the object's name, then a dot, then the name the data has inside the object's table; and if that data is itself another object, just repeat the procedure.
+
+- zoom in on this and scroll over it left to right.
+
+![](objects.svg)
+
+- now we can make a React component that displays the data stored in this object. so, yeah, this is basically just HTML, just using data from the object inside curly braces.
+
+```jsx
+return <div className="pokedexEntry">
+      <h4>#{data.id} - {data.name}</h4>
+      <img src={data.sprites.front_default} />
+      <p>Height: {data.height}, Weight: {data.weight}</p>
+    </div>;
+```
+
+- this works, but it's a little bit ugly. i'm going to write some css to fix it. you can follow along, or, honestly, i'm just going to post the code in the discord and you can copy paste it. this isn't a css lesson.
+
+```css
+* {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.pokedexEntry {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  display: inline-block;
+}
+```
+
+- i'm first selecting all the elements and changing the font to look less weird and old. i'm also removing all the margins on everything to make stuff less spread out. then, i'm selecting the div that contains our pokemon data specifically, centering the text, adding a border, adding some padding along the inside edge of the div, and setting the display mode to inline-block so it doesn't take up the whole width of the page. splendid.
+
+- so. in our hello world example, we used useState to make our component change over time. this time, we're going to use another react hook, called useFetch.
+
+- react hooks are functions that give you access to react's data and let you receive updates from it. their names start with "use". we've already seen one of react's built-in hooks, "useState"; it let us store a variable in react's memory, and it also gave us a way to receive updates about that variable from it.
+
+- useFetch has different functionality, but still deals with triggering changes to the component: useFetch will ask the browser to retrieve a javascript object from a url and then trigger our component function to be re-run once that object loads. behind the scenes, it's actually using useState to manage variables; it is a custom hook that someone created, which just means that it's a function that secretly contains one or many of react's basic built-in hooks.
+
+- believe it or not, there really are javascript objects that can be found by going to urls on the internet. a website that makes data available in a machine-readable form at certain urls is called an application programming interface, or API. "API" is a broad term that can apply to a million different things, and this is one of them. a lot of apis require you to make an account and have login credentials and stuff, but one that doesn't is the pokemon api located at pokeapi.com. from this api, we can freely retrieve an object that stores the data of any pokemon based on its name or id. we can then use our existing code to display it.
+
+- call useFetch like this:
+
+```jsx
+const {isLoading, data} = useFetch("https://pokeapi.co/api/v2/pokemon/bulbasaur");
+```
+
+- you can go to that url to see all the data in the object that's available there, but we're just going to use the members we've already been using. to switch over to the new pokemon data that this call gave us, we can just store it under our old variable name like this:
+
+```js
+myPokemon = data;
+```
+
+- but, there is one problem. we need to figure out what to do when that object from that url hasn't loaded yet. isLoading will inform us whether it has or hasn't loaded; we can use a simple if statement to change this function's behavior if it hasn't.
 
 ```jsx
 if (isLoading) {
@@ -179,10 +239,50 @@ if (isLoading) {
 }
 ```
 
-now our code will work. all we had to do is stop it from getting to the point where it attempted to read data from this object when the object hadn't actually loaded yet.
+- now our code will work. all we had to do is stop it from getting to the point where it attempted to read data from this object when the object hadn't actually loaded yet; when this return statement runs, the function will end before it gets to that stuff. aside from just using variables within the jsx like we've been doing, this is another way to change what a component looks like based on the data in the function; it's called conditional rendering.
 
-so, the main advantage to using this api instead of making our own objects is that now we can get data for every pokemon instantly. if we change the url that we're passing to useFetch, we can get the pokemon corresponding to a different id. we can also actually use a pokemon's name in the same spot and get a specific pokemon.
+- so, the main advantage to using this api instead of making our own objects is that now we can get data for any pokemon instantly. if we change the url that we're passing to useFetch, we can get the pokemon corresponding to a different id. we can also actually use a pokemon's name in the same spot and get a specific pokemon.
 
-then, change this function's name to my pokemon and instantiate it a couple of times in my component. to switch what pokemon each of them display, use props. just like functions take inputs, components take inputs.
+- now we can do the same thing we did earlier and display multiple pokemon. let's change the name of this function to something else, like PokemonComponent, and then use it a bunch of times in a MyComponent function:
 
-if we want, we could use a for loop to generate the first 10, 20, or 100 pokemon. we can also get the names of all the pokemon ever, filter it, and create a pokemon component for each name in the filtered results. and that's our pokedex.
+```jsx
+function MyComponent(){
+  return <>
+    <PokemonComponent />
+    <PokemonComponent />
+    <PokemonComponent />
+  <>;
+}
+```
+
+- well. there's one problem. this method gives us the potential for infinite bulbasaurs, but it would be nice to change what pokemon each of these things displays.
+
+- fortunately, it turns out that just like functions can take arguments as input when they need to output something different based on when and where they are called, function components can take input as well. these inputs are called "props". let's add a couple things to our PokemonComponent function to change its behavior based on a prop called pokeID.
+
+- first, we add an input argument to its declaration:
+
+```jsx
+function PokemonComponent(props){
+```
+
+- and props is actually an object. so let's assume it has a member called "whichMon" and use it to determine the URL that we will fetch our pokemon object from:
+
+```jsx
+const {isLoading, data} = useFetch(
+    "https://pokeapi.co/api/v2/pokemon/"+props.whichMon
+  );
+```
+
+- now, all we have to do is modify our MyComponent function to pass a prop into the PokemonComponents it returns. this is how you do that:
+
+```jsx
+function MyComponent(){
+  return <>
+    <PokemonComponent whichMon="pikachu" />
+    <PokemonComponent whichMon="wartortle" />
+    <PokemonComponent whichMon="bulbasaur" />
+  <>;
+}
+```
+
+- the possibilities from here are endless. since the pokeapi also accepts ids when specifying which pokemon you want to load, we could use a for loop to load a whole bunch of them; we could also use useFetch again to get a list of all pokemon names from the api and then search through them to figure out which ones to render. we could display more stats, we could add more pictures from the sprites object, and we could do our best to develop a function that puts little hats on all of them. but we've already done a lot since we started here looking at mitch mart, and it's up to you to take the next steps. goodbye.
