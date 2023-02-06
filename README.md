@@ -188,6 +188,8 @@ function MyComponent(){
 
 - now we can make a React component that displays the data stored in this object. so, yeah, this is basically just HTML, just using data from the object inside curly braces.
 
+- first, we'll make a header containing the pokemon's id and name. then, we'll add the image for it. you might be used to writing the image source attribute with quotes in normal HTML, but because we want to use a javascript expression as the source, we have to use curly braces instead. then, i'll make a paragraph that includes the height and weight.
+
 ```jsx
 return <div className="pokedexEntry">
       <h4>#{data.id} - {data.name}</h4>
