@@ -1,6 +1,6 @@
 # React
 
-React is a library written in JavaScript that tries to and usually succeeds at making it easier to make interactive web pages. React combines the descriptive markup of HTML, which we examined during our first meeting, with the dynamic code execution that we saw in our Python lesson, so i'm going to have to assume some background coding knowledge from you to avoid doing those lessons again at 3x speed. While you are all going to this Codepen.io link: https://codepen.io/tobeofuse/pen/MWBqqPX?editors=1010 , I am going to briefly explain how React makes coding simpler.
+React is a library written in JavaScript that tries to and usually succeeds at making it easier to make interactive web pages. React combines the descriptive markup of HTML, which we examined during our first meeting, with the dynamic code execution that we saw in our Python lesson, so i'm going to have to assume some background coding knowledge from you to avoid doing those lessons again at 3x speed. While you are all going to this web editor link: https://hacksu.com/react , I am going to briefly explain how React makes coding simpler.
 
 Let's look at [this checkout form](https://hacksu.github.io/react-tutorial/checkout-example/checkout-js.html), \[note to presenter: go to that site and show them these things] which I created using just the tools from our first lesson (HTML, CSS, and JavaScript.) The idea is that you can pay for a purchase at Mitch Mart using any combination of these three payment options: your existing account credit, a new credit card, or just trust me bro, come on, I'll pay you back, just trust me. If you're using an existing account, the login part is enabled; if you're entering a new card, the new card part is enabled, but if you're playing the bro card, you never need to enter anything.
 
@@ -22,7 +22,7 @@ So, yeah. Instead of having three fiddly little event listeners that update the 
 
 - so now we've seen how using React makes a difference in the process of updating a web page. basically, the code that comes packaged with react takes care of the job of "doing updates." your job is just to write the code that outputs what stuff should look like, and react will re-run that code when the variables that you're using in your code change.
 
-(again, https://codepen.io/tobeofuse/pen/MWBqqPX?editors=1010 )
+(again, http://hacksu.com/react, or https://codepen.io/tobeofuse/pen/MWBqqPX?editors=1010 )
 
 ```javascript
 // boring template stuff:
