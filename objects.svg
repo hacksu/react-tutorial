@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="895.85205mm"
+   height="131.7986mm"
+   viewBox="0 0 895.85204 131.7986"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="objects.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#111111"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:zoom="0.33184273"
+     inkscape:cx="1463.0424"
+     inkscape:cy="79.857105"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(51.322398,-57.67109)">
+    <rect
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.99999;stroke-linecap:square"
+       id="rect23513"
+       width="894.85205"
+       height="130.79861"
+       x="-50.822403"
+       y="58.171085" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square"
+       id="rect890"
+       width="166.63892"
+       height="100.8604"
+       x="35.480537"
+       y="80.528862" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 108.81092,80.057775 V 181.25757"
+       id="path925" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 35.800485,105.99198 H 202.68148"
+       id="path927" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 35.800485,132.77187 H 202.68148"
+       id="path1009" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 35.800485,157.11857 H 202.68148"
+       id="path1011" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="43.399815"
+       y="99.22654"
+       id="text1697"><tspan
+         sodipodi:role="line"
+         id="tspan1695"
+         style="stroke-width:0.264583"
+         x="43.399815"
+         y="99.22654">x</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="44.067558"
+       y="123.46938"
+       id="text2133"><tspan
+         sodipodi:role="line"
+         id="tspan2131"
+         style="stroke-width:0.264583"
+         x="44.067558"
+         y="123.46938" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="43.421864"
+       y="151.65875"
+       id="text2521"><tspan
+         sodipodi:role="line"
+         id="tspan2519"
+         style="stroke-width:0.264583"
+         x="43.421864"
+         y="151.65875">flavor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="42.782452"
+       y="174.49213"
+       id="text2891"><tspan
+         sodipodi:role="line"
+         id="tspan2889"
+         style="stroke-width:0.264583"
+         x="42.782452"
+         y="174.49213">myPokemon</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="121.14181"
+       y="98.944649"
+       id="text4349"><tspan
+         sodipodi:role="line"
+         id="tspan4347"
+         style="stroke-width:0.264583"
+         x="121.14181"
+         y="98.944649">5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="121.51662"
+       y="123.18749"
+       id="text5673"><tspan
+         sodipodi:role="line"
+         id="tspan5671"
+         style="stroke-width:0.264583"
+         x="121.51662"
+         y="123.18749">true</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="120.93234"
+       y="150.24928"
+       id="text6073"><tspan
+         sodipodi:role="line"
+         id="tspan6071"
+         style="stroke-width:0.264583"
+         x="120.93234"
+         y="150.24928">&quot;mint&quot;</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 153.06821,170.26372 H 224.38728 V 84.980896 H 302.7537"
+       id="path6188"
+       sodipodi:nodetypes="cccc" />
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square"
+       id="path6292"
+       cx="152.59251"
+       cy="170.24609"
+       r="2.8013172" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:#000000;stroke-width:13.7191;stroke-linecap:square"
+       id="path6414"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="971.66718"
+       sodipodi:cy="299.38431"
+       sodipodi:r1="64.999626"
+       sodipodi:r2="32.499817"
+       sodipodi:arg1="0"
+       sodipodi:arg2="1.0471976"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 1036.6668,299.38431 939.16736,355.67564 V 243.09298 Z"
+       transform="matrix(0.08164243,0,0,0.06507787,224.77265,65.23947)"
+       inkscape:transform-center-x="-1.3266793"
+       inkscape:transform-center-y="-1.0194581e-06" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="249.95805"
+       y="96.97625"
+       id="text7884"><tspan
+         sodipodi:role="line"
+         id="tspan7882"
+         style="stroke-width:0.264583"
+         x="249.95805"
+         y="96.97625">myPokemon.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="43.129719"
+       y="123.18749"
+       id="text10933"><tspan
+         sodipodi:role="line"
+         id="tspan10931"
+         style="stroke-width:0.264583"
+         x="43.129719"
+         y="123.18749">coldWeather</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square"
+       id="rect13943"
+       width="166.63892"
+       height="100.8604"
+       x="316.13556"
+       y="80.528862" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 389.46595,80.057775 V 181.25757"
+       id="path13945" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 316.45552,105.99198 H 483.33651"
+       id="path13947" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 316.45552,132.77187 H 483.33651"
+       id="path13949" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 316.45552,157.11857 H 483.33651"
+       id="path13951" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="324.05484"
+       y="99.22654"
+       id="text13955"><tspan
+         sodipodi:role="line"
+         id="tspan13953"
+         style="stroke-width:0.264583"
+         x="324.05484"
+         y="99.22654">name</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="324.0769"
+       y="151.65875"
+       id="text13959"><tspan
+         sodipodi:role="line"
+         id="tspan13957"
+         style="stroke-width:0.264583"
+         x="324.0769"
+         y="151.65875">height</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="323.4375"
+       y="174.49213"
+       id="text13963"><tspan
+         sodipodi:role="line"
+         id="tspan13961"
+         style="stroke-width:0.264583"
+         x="323.4375"
+         y="174.49213">sprites</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="401.79684"
+       y="98.944649"
+       id="text13967"><tspan
+         sodipodi:role="line"
+         id="tspan13965"
+         style="stroke-width:0.264583"
+         x="401.79684"
+         y="98.944649">&quot;pikachu&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="402.17166"
+       y="123.18749"
+       id="text13971"><tspan
+         sodipodi:role="line"
+         id="tspan13969"
+         style="stroke-width:0.264583"
+         x="402.17166"
+         y="123.18749">25</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="401.58737"
+       y="150.24928"
+       id="text13975"><tspan
+         sodipodi:role="line"
+         id="tspan13973"
+         style="stroke-width:0.264583"
+         x="401.58737"
+         y="150.24928">4</tspan></text>
+    <circle
+       style="fill:#000000;stroke:#000000;stroke-width:1;stroke-linecap:square"
+       id="circle13977"
+       cx="427.89157"
+       cy="170.24609"
+       r="2.8013172" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="323.78476"
+       y="123.18749"
+       id="text13981"><tspan
+         sodipodi:role="line"
+         id="tspan13979"
+         style="stroke-width:0.264583"
+         x="323.78476"
+         y="123.18749">id</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="319.83823"
+       y="73.856117"
+       id="text13985"><tspan
+         sodipodi:role="line"
+         id="tspan13983"
+         style="stroke-width:0.264583"
+         x="319.83823"
+         y="73.856117">Object members</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="513.26324"
+       y="98.405746"
+       id="text17623"><tspan
+         sodipodi:role="line"
+         id="tspan17621"
+         style="stroke-width:0.264583"
+         x="513.26324"
+         y="98.405746">myPokemon.sprites.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square"
+       id="rect17625"
+       width="223.11235"
+       height="100.8604"
+       x="612.12384"
+       y="80.528862" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 685.4542,80.057775 V 181.25757"
+       id="path17627" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 612.39404,105.99198 H 835.23468"
+       id="path17629" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 612.39404,132.77187 H 835.23468"
+       id="path17631" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 612.39404,157.11857 H 835.23468"
+       id="path17633" />
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="618.35175"
+       y="98.66275"
+       id="text17637"><tspan
+         sodipodi:role="line"
+         id="tspan17635"
+         style="stroke-width:0.264583"
+         x="618.35175"
+         y="98.66275">front_default</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="690.73773"
+       y="97.253288"
+       id="text17649"><tspan
+         sodipodi:role="line"
+         id="tspan17647"
+         style="stroke-width:0.264583"
+         x="690.73773"
+         y="97.253288">&quot;https://hacksu.com/pika.png&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="615.82648"
+       y="73.856117"
+       id="text17667"><tspan
+         sodipodi:role="line"
+         id="tspan17665"
+         style="stroke-width:0.264583"
+         x="615.82648"
+         y="73.856117">Nested object members</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="13.133512"
+       y="116.66355"
+       id="text25427"><tspan
+         sodipodi:role="line"
+         id="tspan25425"
+         style="text-align:end;text-anchor:end;stroke-width:0.264583"
+         x="13.13351"
+         y="116.66355">Examples of</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:end;text-anchor:end;stroke-width:0.264583"
+         x="13.133511"
+         y="130.77467"
+         id="tspan25429">variables</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11.2889px;line-height:1.25;font-family:Calibri;-inkscape-font-specification:Calibri;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="-17.957533"
+       y="174.07309"
+       id="text26093"><tspan
+         sodipodi:role="line"
+         id="tspan26091"
+         style="stroke-width:0.264583"
+         x="-17.957533"
+         y="174.07309">An object:</tspan></text>
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 30.830088,85.776458 H 20.464988 V 152.75095 H 30.431431"
+       id="path26352" />
+    <path
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+       d="M 429.8877,170.26372 H 501.20677 V 84.980896 H 596.4868"
+       id="path27489"
+       sodipodi:nodetypes="cccc" />
+    <path
+       sodipodi:type="star"
+       style="fill:#000000;stroke:#000000;stroke-width:13.7191;stroke-linecap:square"
+       id="path27491"
+       inkscape:flatsided="true"
+       sodipodi:sides="3"
+       sodipodi:cx="971.66718"
+       sodipodi:cy="299.38431"
+       sodipodi:r1="64.999626"
+       sodipodi:r2="32.499817"
+       sodipodi:arg1="0"
+       sodipodi:arg2="1.0471976"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 1036.6668,299.38431 939.16736,355.67564 V 243.09298 Z"
+       transform="matrix(0.08164243,0,0,0.06507787,518.92859,65.23947)"
+       inkscape:transform-center-x="-1.3266793"
+       inkscape:transform-center-y="-1.0194581e-06" />
+  </g>
+</svg>
