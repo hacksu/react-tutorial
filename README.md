@@ -54,7 +54,7 @@ function MyComponent(){
 return <p>Hello, world</p>;
 ```
 
-- we are using an extension to javascript called jsx that lets you create and use html elements in javascript code exactly as you would use numbers or strings or other data types. this syntax is not technically 100% tied to react, but it's very convenient to use it here. if you just write a start tag, some content, and an end tag, you get an html element, just like if you type a quotation mark, some text, and then another quotation mark, you get a string.
+- we are using an extension to javascript called jsx that lets you create and use html elements in javascript code exactly as you would use numbers or strings or other data types. this syntax is not technically 100% tied to react, but it's very convenient to use it here. in jsx, if you just write a start tag, some content, and an end tag, you get an html element, just like how in most programming languages, if you type a quotation mark, some text, and then another quotation mark, you get a string.
 
 - so does everyone see the hello, world? is codepen, like, working? and is everyone processing what we're doing here? bc i guess this looks kind of weird.
 
@@ -63,7 +63,7 @@ return <p>Hello, world</p>;
 - first we're going to declare a variable called place. to declare a variable in javascript, you can use the keyword "let"; so this will become
 
 ```js
-let place = "texas";
+let place = "world";
 ```
 
 - then, we can use it in our html element just by enclosing the variable name in curly braces. replace "world" with that:
@@ -81,7 +81,7 @@ const [greeting, setGreeting] = useState("Hello");
 ```
 
 
-- while you copy that down: this is the intricate clockwork part of react. react updates the page over and over again by running this function over and over again. however, normally, variables get reset to their initial values when functions get re-run. if we updated our "place" variable by saying, like, `place="mars"`, it wouldn't update things properly; because to create the updated version of this page, the function needs to be re-run, and every time this function runs, place gets set to "texas" by that line of code. so it would never output anything containing "mars" in the return value down here. that's the most basic reason why we can't update our variables the normal way and have our page update.
+- while you copy that down: this is the intricate clockwork part of react. react updates the page over and over again by running this function over and over again. however, normally, variables get reset to their initial values when functions get re-run. if we updated our "place" variable by saying, like, `place="mars"`, it wouldn't update things properly; because to create the updated version of this page, the function needs to be re-run, and every time this function runs, place gets set to "world" by that line of code. so it would never output anything containing "mars" in the return value down here. that's the most basic reason why we can't update our variables the normal way and have our page update.
 
 - so, the values of our variables actually need to be stored outside of our component-creating function, and react will do this for us. we have all the tools we need for that on this line of code here (the one with "useState".)
 
@@ -94,7 +94,7 @@ const [greeting, setGreeting] = useState("Hello");
 - so, this overall situation might sound tricky, but if you understand it even a little, the actual code we need to write will seem pretty simple. first, let's create a button under our paragraph.
 
 ```html
-<button>full cowboy</button>
+<button>plead for one's life</button>
 ```
 
 - when we have multiple HTML elements in a row, we need to group them, kind of like how you group strings and numbers into arrays when you want to treat multiple as a single thing. to do that in jsx, we put an empty start tag before and an empty close tag after the elements we have. so, our return statement will look like this:
@@ -102,7 +102,7 @@ const [greeting, setGreeting] = useState("Hello");
 ```jsx
 return <>
     <p>Hello, {place}</p>
-    <button>full cowboy</button>
+    <button>plead for one's life</button>
   </>;
 ```
 
@@ -111,22 +111,24 @@ return <>
 ```jsx
 return <>
     <p>Hello, {place}</p>
-    <button onClick={}>full cowboy</button>
+    <button onClick={}>plead for one's life</button>
   </>;
 ```
 
-- inside the curly braces, we can put the code we want to run when the button is clicked. i'm thinking something like `setGreeting("howdy")`. we can't just put that in the curly braces, though, because that constitutes calling the function in our code and the greeting will be set to howdy immediately, instead of that happening when the user clicks the button. to fix this, we just have to add the characters `()=>` right in front of the call to setGreeting. the resulting construct is called an arrow function; and this is what you do when you want to store a function call in your code for later instead of making it happen immediately.
+- inside the curly braces, we can put the code we want to run when the button is clicked. i'm thinking something like `setGreeting("please, god, no")`. we can't just put that in the curly braces, though, because that constitutes calling the function in our code and the greeting will be set to please god no immediately, instead of that happening when the user clicks the button. to fix this, we just have to add the characters `()=>` right in front of the call to setGreeting. the resulting construct is called an arrow function; and this is what you do when you want to store a function call in your code for later instead of making it happen immediately.
 
 - so do that. also, let's use the variable "greeting" in the HTML elements we're creating so we can see what it's storing, live. our completed function will look like this:
 
 ```jsx
 function MyComponent(){
   // create elements here:
-  let place = "texas";
+  let place = "world";
   const [greeting, setGreeting] = useState("hello");
   return <>
     <p>{greeting}, {place}</p>
-    <button onClick={()=>setGreeting("howdy")}>full cowboy</button>
+    <button onClick={()=>setGreeting("please, god, no")}>
+      plead for one's life
+    </button>
   </>;
 }
 ```
