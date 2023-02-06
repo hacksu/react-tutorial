@@ -115,7 +115,9 @@ return <>
   </>;
 ```
 
-- inside the curly braces, we can put the code we want to run when the button is clicked. i'm thinking something like `setGreeting("bonjour le monde")`. we can't just put that in the curly braces, though, because that constitutes calling the function in our code and the greeting will be set to bonjour immediately, instead of that happening when the user clicks the button. to fix this, we just have to add the characters `()=>` right in front of the call to setGreeting. the resulting construct is called an arrow function; and this is what you do when you want to store a function call in your code for later instead of making it happen immediately.
+- inside the curly braces, we can put the code we want to run when the button is clicked. i'm thinking something like `setGreeting("bonjour le monde")`. we can't just put that in the curly braces, though, because that constitutes calling the function in our code and the greeting will be set to bonjour immediately, instead of that happening when the user clicks the button.
+
+- to fix this, we just have to add the characters `()=>` right in front of the call to setGreeting. the resulting construct is called an arrow function; and this is what you do when you want to store a function call in your code for later instead of making it happen immediately. (it's actually basically the same thing as a lambda function from Python, Java, or C++.)
 
 - so do that. our completed function will look like this:
 
@@ -218,13 +220,15 @@ return <div className="pokedexEntry">
 
 - useFetch has different functionality, but still deals with triggering changes to the component: useFetch will ask the browser to retrieve a javascript object from a url and then trigger our component function to be re-run once that object loads. behind the scenes, it's actually using useState to manage variables; it is a custom hook that someone created, which just means that it's a function that secretly contains one or many of react's basic built-in hooks.
 
-- believe it or not, there really are javascript objects that can be found by going to urls on the internet. a website that makes data available in a machine-readable form at certain urls is called an application programming interface, or API. "API" is a broad term that can apply to a million different things, and this is one of them. a lot of apis require you to make an account and have login credentials and stuff, but one that doesn't is the pokemon api located at pokeapi.com. from this api, we can freely retrieve an object that stores the data of any pokemon based on its name or id. we can then use our existing code to display it.
+- believe it or not, there really are javascript objects that can be found by going to urls on the internet. a website that makes data available in a machine-readable form at certain urls is one of the many things that can be called an application programming interface, or API. a lot of apis require you to make an account and have login credentials and stuff, but one that doesn't is the pokemon api located at pokeapi.com. from this api, we can freely retrieve an object that stores the data of any pokemon based on its name or id. we can then use our existing code to display it.
 
 - call useFetch like this:
 
 ```jsx
 const {isLoading, data} = useFetch("https://pokeapi.co/api/v2/pokemon/bulbasaur");
 ```
+
+- you might notice that when useState returned its two variables, we captured them with square brackets, but here, we're using curly braces. this is because useState returns an array of two values, and you use square brackets to get variables in order from a list; on the other hand, useFetch returns an object of named values, and we use curly braces to get variables out of objects by their name. any function, including react hooks, can use either of those methods to return multiple things; you just have to know or ideally find an example showing which one is happening.
 
 - you can go to that url to see all the data in the object that's available there, but we're just going to use the members we've already been using. to switch over to the new pokemon data that this call gave us, we can just store it under our old variable name like this:
 
@@ -242,7 +246,7 @@ if (isLoading) {
 
 - now our code will work. all we had to do is stop it from getting to the point where it attempted to read data from this object when the object hadn't actually loaded yet; when this return statement runs, the function will end before it gets to that stuff. aside from just using variables within the jsx like we've been doing, this is another way to change what a component looks like based on the data in the function; it's called conditional rendering.
 
-- so, the main advantage to using this api instead of making our own objects is that now we can get data for any pokemon instantly. if we change the url that we're passing to useFetch, we can get the pokemon corresponding to a different id. we can also actually use a pokemon's name in the same spot and get a specific pokemon.
+- so, the main advantage to using this api instead of making our own objects is that now we can get data for any pokemon instantly. if we change the url that we're passing to useFetch, we can get the pokemon corresponding to a different id. we can also actually use a pokemon's name or id to get a specific pokemon.
 
 - now we can do the same thing we did earlier and display multiple pokemon. let's change the name of this function to something else, like PokemonComponent, and then use it a bunch of times in a MyComponent function:
 
@@ -266,11 +270,11 @@ function MyComponent(){
 function PokemonComponent(props){
 ```
 
-- and props is actually an object. so let's assume it has a member called "whichMon" and use it to determine the URL that we will fetch our pokemon object from:
+- and props is actually an object. so let's assume it has a member called "whichGuy" and use it to determine the URL that we will fetch our pokemon object from:
 
 ```jsx
 const {isLoading, data} = useFetch(
-    "https://pokeapi.co/api/v2/pokemon/"+props.whichMon
+    "https://pokeapi.co/api/v2/pokemon/"+props.whichGuy
   );
 ```
 
@@ -279,9 +283,9 @@ const {isLoading, data} = useFetch(
 ```jsx
 function MyComponent(){
   return <>
-    <PokemonComponent whichMon="pikachu" />
-    <PokemonComponent whichMon="wartortle" />
-    <PokemonComponent whichMon="bulbasaur" />
+    <PokemonComponent whichGuy="pikachu" />
+    <PokemonComponent whichGuy="wartortle" />
+    <PokemonComponent whichGuy="bulbasaur" />
   <>;
 }
 ```
