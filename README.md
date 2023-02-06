@@ -6,9 +6,7 @@ Let's look at [this checkout form](https://hacksu.github.io/react-tutorial/check
 
 So it's very simple to state the logic of when each form field should be enabled. The login fields should be enabled if the first checkbox is checked and the third one isn't; and the new card fields should be enabled if the second checkbox is checked and the third one isn't. Does that logic make sense to everyone?
 
-So, in JavaScript, the thing that makes pages interactive are event listeners, which are functions that are automatically called when the user interacts with something on the page. To implement the functionality we have here, we basically have to write three event listeners 
-- one for each checkbox 
-- and they have to make changes to keep the page logically consistent. The event listener for the "existing account" checkbox has to enable or disable the login fields, but to know if it's allowed to enable them, it has to find the "trust me bro" checkbox using its ID or something similar and see if that is checked, because it's not allowed to enable these fields if it is. The event listener for the "new card" checkbox has to do the same thing with these other fields. And while the "trust me bro" checkbox's event listener has a really simple job to do when it gets checked (it just disables everything), when it gets unchecked, it has to retrieve the other two checkboxes and then enable the form fields that correspond to them only if they say so.
+So, in JavaScript, the thing that makes pages interactive are event listeners, which are functions that are automatically called when the user interacts with something on the page. To implement the functionality we have here, we basically have to write three event listeners - one for each checkbox - and they have to make changes to keep the page logically consistent. The event listener for the "existing account" checkbox has to enable or disable the login fields, but to know if it's allowed to enable them, it has to find the "trust me bro" checkbox using its ID or something similar and see if that is checked, because it's not allowed to enable these fields if it is. The event listener for the "new card" checkbox has to do the same thing; it has to look at the "trust me bro" checkbox to decide if it's allowed to enable the card form. And while the "trust me bro" checkbox's event listener has a really simple job to do when it gets checked (it just disables everything), when it gets unchecked, it has to retrieve the other two checkboxes and then enable the form fields that correspond to them only if they say so.
 
 So, in short, we have three different event listener functions, they have to find and read from these other checkbox elements to find out what changes they need to make to the page, and the rules they have to follow to enforce our simple rules take some thinking about. We've gone from simple logic that I could get you all agree on to a long description that you'd probably want to double-check. Now let's visit [the version of this form that I made with React](https://hacksu.github.io/react-tutorial/checkout-example/checkout-react.html) [it's also linked at the bottom of the vanilla JS version] and see what's different.
 
@@ -16,11 +14,13 @@ The functionality of this page is exactly the same. The first difference in the 
 
 And for the second difference, let's see what React does when we change whether a checkbox is checked.
 
-So, yeah. Instead of having three fiddly little event listeners that update the page over time, when a state variable changes in React, there's an explosion and the form is rebuilt from scratch. That's a bit of a simplification, there's some reuse of stuff, but the idea is: you only have to write one function, which will create your form, and it will automatically be re-run [toggle checkbox] when something changes, and in the function you can just use that simple logic we started with when creating these elements. [Reiterate logic.] So things are a lot easier.
+So, yeah. Instead of having three fiddly little event listeners that update the page over time, when a state variable changes in React, there's an explosion and the form is rebuilt from scratch. That's a bit of a simplification, there's some reuse of stuff, but the idea is: you only have to write one function, which will create your form, and it will automatically be re-run [toggle checkbox] when something changes. in that function, you can just use that simple logic we started with when creating these elements. You can make these fields enabled if the login variable is true and the trust me variable is false, and these enabled if the new card variable is true and the trust me variable is false.
+
+Only having to write one function, and re-running it to remake the page when variables change, makes things simpler. And conveniently, React will take care of re-running the function; all we have to do is write the content and use the variables.
+
+Let's go to codepen and do that.
 
 \~~then, i gave up on writing complete paragraphs~~
-
-- so now we've seen how using React makes a difference in the process of updating a web page. basically, the code that comes packaged with react takes care of the job of "doing updates." your job is just to write the code that outputs what stuff should look like, and react will re-run that code when the variables that you're using in your code change.
 
 (again, http://hacksu.com/react, or https://codepen.io/tobeofuse/pen/MWBqqPX?editors=1010 )
 
@@ -44,9 +44,9 @@ function MyComponent(){
 
 - btw, while on codepen, try not to refresh or close the page, or you will lose your progress, unless you're signed into a codepen account and can thus save things.
 
-- so we're starting with a basic template here. don't worry too much about this code because like i said, it's a standard template. but, it first uses import statements to give you access to variables that are declared in the react code; then, it makes use of some of them and makes the react code start updating the page based on the output of a function called MyComponent.
+- so we're starting with a basic template here. don't worry too much about this code because like i said, it's a standard template. but, it first uses import statements to give you access to variables that are declared in the react code located at those URLs; then, it makes use of some of them and makes the react code start updating the page based on the output of a function called MyComponent.
 
-- so we need to write the code that goes in MyComponent, and make it return (output) the stuff we want on our page. a function is a reusable segment of code that probably contains some local variables; in react, a "component" is a reusable set of html elements whose contents are determined by a set of variables. so you can see how these things go together. when we write this function, we're really creating a component.
+- so we need to write the code that goes in MyComponent, and make it return (output) the stuff we want on our page. a function is a reusable segment of code that probably contains some local variables; in react, a "component" is a reusable set of html elements whose contents are determined by a set of variables. so you can see how these things go together. when we write this function, in the language of React, we're really "creating a component".
 
 - let's do the simplest version of that now.
 
@@ -60,16 +60,16 @@ return <p>Hello, world</p>;
 
 - okay great. the next thing we're going to do is create a variable and use it so we can see how to integrate variables into our html elements.
 
-- first we're going to declare a variable called place. to declare a variable in javascript, you can use the keyword "let"; so this will become
+- first we're going to declare a variable called greeting. to declare a variable in javascript, you can use the keyword "let"; so this will become
 
 ```js
-let place = "world";
+let greeting = "Hello, world";
 ```
 
-- then, we can use it in our html element just by enclosing the variable name in curly braces. replace "world" with that:
+- then, we can use it in our html element just by enclosing the variable name in curly braces:
 
 ```jsx
-return <p>Hello, {place}</p>;
+return <p>{greeting}</p>;
 ```
 
 - so, now we're creating an html element and incorporating the value of a variable. go us. if you want, you can change this string in the code and see how the result changes. however, to make a real web page, we're going to need to have a way to change the value based on something the user does; we need something the user can click, like a button or something. also, if we're doing that, we do have to update the variables in a way that prompts the react library code that's running in the background to update the page.
@@ -77,15 +77,15 @@ return <p>Hello, {place}</p>;
 - let's handle that first problem first. we need to create both a variable and a way to update it. this can be done with the react-provided function "use state". this involves more weird syntax.
 
 ```js
-const [greeting, setGreeting] = useState("Hello");
+// replaces first variable declaration
+const [greeting, setGreeting] = useState("Hello, world");
 ```
 
-
-- while you copy that down: this is the intricate clockwork part of react. react updates the page over and over again by running this function over and over again. however, normally, variables get reset to their initial values when functions get re-run. if we updated our "place" variable by saying, like, `place="mars"`, it wouldn't update things properly; because to create the updated version of this page, the function needs to be re-run, and every time this function runs, place gets set to "world" by that line of code. so it would never output anything containing "mars" in the return value down here. that's the most basic reason why we can't update our variables the normal way and have our page update.
+- while you copy that down: this is the intricate clockwork part of react. react updates the page over and over again by running this function over and over again. however, normally, variables get reset to their initial values when functions get re-run. if we updated our "place" variable just by saying, like, `greeting="buongiorno"`, it wouldn't update things properly; because to create the updated version of this page, the function needs to be re-run, and every time this function runs, place gets set to "world" by that line of code. so it would never output anything containing "buongiorno" in the return value down here. that's the most basic reason why we can't update our variables the normal way and have our page update.
 
 - so, the values of our variables actually need to be stored outside of our component-creating function, and react will do this for us. we have all the tools we need for that on this line of code here (the one with "useState".)
 
-- we are calling the function "useState" and giving it the input string "Hello". that input defines the initial value for our "greeting" variable.
+- we are calling the function "useState" and giving it the input string "Hello, world". that input defines the initial value for our "greeting" variable.
 
 - then, later, we can call the function setGreeting to update the value to something other than "Hello". after that, when this function re-runs, and this new line of code executes, greeting will be updated to its latest version by the return value of useState.
 
@@ -94,15 +94,15 @@ const [greeting, setGreeting] = useState("Hello");
 - so, this overall situation might sound tricky, but if you understand it even a little, the actual code we need to write will seem pretty simple. first, let's create a button under our paragraph.
 
 ```html
-<button>plead for one's life</button>
+<button>Translate</button>
 ```
 
-- when we have multiple HTML elements in a row, we need to group them, kind of like how you group strings and numbers into arrays when you want to treat multiple as a single thing. to do that in jsx, we put an empty start tag before and an empty close tag after the elements we have. so, our return statement will look like this:
+- when we have multiple HTML elements in a row, we need to group them, kind of like how you group strings and numbers into arrays when you want to treat multiple of them as a single thing. to do that in jsx, we put an empty start tag before and an empty close tag after the elements we have. so, our return statement will look like this:
 
 ```jsx
 return <>
-    <p>Hello, {place}</p>
-    <button>plead for one's life</button>
+    <p>{greeting}</p>
+    <button>Translate</button>
   </>;
 ```
 
@@ -110,34 +110,33 @@ return <>
 
 ```jsx
 return <>
-    <p>Hello, {place}</p>
-    <button onClick={}>plead for one's life</button>
+    <p>{greeting}</p>
+    <button onClick={}>Translate</button>
   </>;
 ```
 
-- inside the curly braces, we can put the code we want to run when the button is clicked. i'm thinking something like `setGreeting("please, god, no")`. we can't just put that in the curly braces, though, because that constitutes calling the function in our code and the greeting will be set to please god no immediately, instead of that happening when the user clicks the button. to fix this, we just have to add the characters `()=>` right in front of the call to setGreeting. the resulting construct is called an arrow function; and this is what you do when you want to store a function call in your code for later instead of making it happen immediately.
+- inside the curly braces, we can put the code we want to run when the button is clicked. i'm thinking something like `setGreeting("bonjour le monde")`. we can't just put that in the curly braces, though, because that constitutes calling the function in our code and the greeting will be set to bonjour immediately, instead of that happening when the user clicks the button. to fix this, we just have to add the characters `()=>` right in front of the call to setGreeting. the resulting construct is called an arrow function; and this is what you do when you want to store a function call in your code for later instead of making it happen immediately.
 
-- so do that. also, let's use the variable "greeting" in the HTML elements we're creating so we can see what it's storing, live. our completed function will look like this:
+- so do that. our completed function will look like this:
 
 ```jsx
 function MyComponent(){
   // create elements here:
-  let place = "world";
-  const [greeting, setGreeting] = useState("hello");
+  const [greeting, setGreeting] = useState("Hello, world");
   return <>
-    <p>{greeting}, {place}</p>
-    <button onClick={()=>setGreeting("please, god, no")}>
-      plead for one's life
+    <p>{greeting}</p>
+    <button onClick={()=>setGreeting("Bonjour le monde")}>
+      Translate
     </button>
   </>;
 }
 ```
 
-- so yeah. this is pretty much as simple as a react app gets. i will now pause so that everyone can catch up, ask questions, or opine that this code looks weird.
+- so yeah. you thought you came here to learn javascript, but you're actually learning french. this is pretty much as simple as a react app gets. i will now pause so that everyone can catch up, ask questions, or opine that this code looks weird.
 
 - this is a lot of different kinds of punctuation in one place.
 
-- the problem with doing a react app example is that, for a hello-world type example, using normal javascript event listeners is like, a lot simpler? there's a lot of logic that goes into something pretty simple, here? but the extra tools pay off when it comes to larger examples, i promise. that's why i had to show you one at the beginning of this. anyway. let's do one more fun thing with this basic example before we move on to something more interesting.
+- the problem with doing a react app example is that, for a hello-world type example, using normal javascript event listeners is probably simpler? there's a reasonable amount of behind the scenes stuff that we had to go over to get this simple app. but the extra tools pay off when it comes to larger examples, i promise. that's why i had to show you one at the beginning of this. anyway. let's do one more fun thing with this basic example before we move on to something more interesting.
 
 - in this boilerplate code at the top, i told react to update the page based on the component/function called MyComponent; so the entire page will be based on what the function MyComponent returns. but i think the page can have more stuff than this. let's rename our function so it no longer comprises the entire contents of the page; i'll call it MyGreeting.
 
@@ -153,7 +152,7 @@ function MyComponent(){
 }
 ```
 
-- so. react enables us to reuse our function component over and over again. each instance of it acts independently; clicking the button in one does not affect the variables in the other. this is one react feature where even in this simple example, it's way easier than anything you can do with plain html and javascript.
+- so. react enables us to reuse our function component over and over again. each instance of it acts independently; clicking the button in one does not affect the variables in the other. this is a very important and useful feature of react that basically justifies its existence. it's kind of weird to use in this case, but we're going to get to do something useful with it.
 
 - now that we've got the basics down, let's reopen the codepen in a new tab, and do something more fun and interesting.
 
