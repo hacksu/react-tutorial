@@ -24,6 +24,24 @@ Let's go to codepen and do that.
 
 (again, http://hacksu.com/react, or https://codepen.io/tobeofuse/pen/MWBqqPX?editors=1010 )
 
+```css
+* {
+  font-family: sans-serif;
+}
+p, h4 {
+  margin: 0;
+}
+button {
+  margin: 10px 0;
+}
+div {
+  text-align: center;
+  border: 1px solid black;
+  padding: 5px;
+  display: inline-block;
+}
+```
+
 ```javascript
 // boring template stuff:
 
@@ -31,10 +49,9 @@ import React, { useState } from "https://esm.sh/react@18.2.0?dev";
 import { createRoot } from "https://esm.sh/react-dom@18.2.0/client?dev";
 import useFetch from "https://esm.sh/react-fetch-hook@1.9.5?dev";
 
-const rootElement = document.querySelector("#root");
+const rootElement = document.querySelector("body");
 const component = React.createElement(MyComponent);
 createRoot(rootElement).render(component);
-
 
 function MyComponent(){
   // create content here:
@@ -44,7 +61,7 @@ function MyComponent(){
 
 - btw, while on codepen, try not to refresh or close the page, or you will lose your progress, unless you're signed into a codepen account and can thus save things.
 
-- so we're starting with a basic template here. don't worry too much about this code because like i said, it's a standard template. but, it first uses import statements to give you access to variables that are declared in the react code located at those URLs; then, it makes use of some of them and makes the react code start updating the page based on the output of a function called MyComponent.
+- so we're starting with a basic template here. don't worry too much about this code because like i said, it's a standard template. (don't even think about the css; it'll get used later.) but, it first uses import statements to give you access to variables that are declared in the react code located at those URLs; then, it makes use of some of them and makes the react code start updating the page based on the output of a function called MyComponent.
 
 - so we need to write the code that goes in MyComponent, and make it return (output) the stuff we want on our page. a function is a reusable segment of code that probably contains some local variables; in react, a "component" is a reusable set of html elements whose contents are determined by a set of variables. so you can see how these things go together. when we write this function, in the language of React, we're really "creating a component".
 
